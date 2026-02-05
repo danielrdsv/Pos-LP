@@ -1,0 +1,18 @@
+// Centralized breakpoints and mixin for media queries
+
+$gridMap: (
+  tiny: (width: (480px)),
+  small: (width: (640px)),
+  medium: (width: (760px)),
+  large: (width: (992px)),
+  giant: (width: (1200px)),
+  cut: (width: (1620px))
+);
+
+@mixin breakpoint($point, $direction: min) {
+  @if map-has-key($gridMap, $point) {
+    @media (#{$direction+'-width'}: nth(map-get(map-get($gridMap, $point), width), 1)) {
+      @content;
+    }
+  }
+}

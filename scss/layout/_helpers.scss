@@ -1,0 +1,13 @@
+.btn,
+button {
+    cursor: pointer;
+    border: 1px solid $dark;
+    border-radius: rem(14px);
+    padding: rem(12px);
+    display: block;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}

@@ -1,0 +1,90 @@
+// Layout
+
+// footer
+
+footer {
+    .footer-container {
+        background-color: $dark;
+        padding: rem(55px) rem(60px);
+        border-radius: rem(45px);
+        color: white;
+
+
+        .footer-navi-holder {
+            margin-bottom: rem(65px);
+
+            .footer-social-icons {
+                gap: rem(20px);
+
+                .social-icon {
+                    color: white;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    font-size: rem(28px);
+
+                    &.facebook {
+                        font-size: rem(32px);
+                    }
+
+                    &::before {
+                        @include icon('linkedin');
+                    }
+
+                    &.linkedin::before {
+                        @include icon('linkedin');
+                    }
+
+                    &.facebook::before {
+                        @include icon('facebook');
+                    }
+
+                    &.twitter::before {
+                        @include icon('twitter');
+                    }
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+
+        .contact-container {
+            span {
+
+                display: block;
+                font-size: rem(18px);
+                margin-bottom: rem(20px);
+
+                &.headline {
+                    background: $primary;
+                    display: inline-block;
+                    padding: rem(7px);
+                    color: $dark;
+                    font-size: rem(20px);
+                    font-weight: 500;
+                    margin-bottom: rem(27px);
+                    border-radius: rem(7px);
+                }
+
+                a {
+                    color: $light;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+
+            .subscribe-container {
+                background: $third;
+                padding: rem(58px) rem(40px);
+                border-radius: rem(14px);
+            }
+        }
+
+    }
+
+
+}

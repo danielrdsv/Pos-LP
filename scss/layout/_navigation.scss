@@ -1,0 +1,23 @@
+// Navigation styles
+
+
+// Footer Navi
+
+.navi-add {
+    display: flex;
+    gap: rem(40px);
+
+    li {
+        a {
+            color: $light;
+            font-size: rem(18px);
+            text-decoration: underline;
+            transition: all 0.3s ease;
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+    }
+}

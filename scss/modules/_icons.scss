@@ -1,0 +1,22 @@
+// Icon codes from IcoMoon selection.json
+// To update: replace codes from fonts/icomoon/selection.json
+
+$icon-codes: (
+  'linkedin': '\e900',
+  'facebook': '\e901',
+  'twitter': '\e902'
+);
+
+// Mixin to easily use icons
+@mixin icon($name) {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: map-get($icon-codes, $name);
+}

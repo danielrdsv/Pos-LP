@@ -1,0 +1,55 @@
+// Globals
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Color Variables
+$primary: #B9FF66;
+$secondary: #191A23;
+$third: #292A32;
+$medium: #F3F3F3;
+$dark: #000000;
+$light: #FFFFFF;
+
+// Spacing Variables
+$grid-gutter-width: 40px;
+
+
+html {}
+
+body {
+    background: $medium;
+    color: #222;
+    font-family: 'Space Grotesk';
+    color: $dark;
+}
+
+
+ul {
+    list-style: none;
+}
+
+// links
+a {
+    transition: all 0.3s ease-in-out;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-weight: 500;
+    margin: 0;
+}
