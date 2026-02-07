@@ -32,7 +32,7 @@ yarn-error.log*
 fonts/icomoon/fonts/
 
 # Ignore compiled CSS (if generated)
-css/*.css
+# css/*.css
 
 # Ignore assets cache
 assets/cache/
