@@ -7,19 +7,759 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <!-- Swiper (CDN) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+    <!-- GSAP & ScrollTrigger for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis smooth scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 </head>
 
 <body>
 
-    <header></header>
+    <header>
+        <div class="fixed-container">
+            <div class="navigation-container container d-flex align-items-center justify-content-between">
+                <a href="/" class="logo-holder">
+                    <img src="/assets/logo-light.png" alt="Positivus LP" class="logo">
+                </a>
 
-    <main></main>
+                <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <div class="header-navi-holder d-large-flex align-items-center">
+                    <nav>
+                        <ul class="navi-main d-flex align-items-center">
+                            <li>
+                                <a href="/" class="nav-link" title="About us">About us</a>
+                            </li>
+                            <li>
+                                <a href="/" class="nav-link" title="Services">Services</a>
+                            </li>
+                            <li>
+                                <a href="/" class="nav-link" title="Use Cases">Use Cases</a>
+                            </li>
+                            <li>
+                                <a href="/" class="nav-link" title="Pricing">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="/" class="nav-link" title="Blog">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="btn-holder">
+                        <a href="/" class="btn secondary" title="Request a quote">Request a quote</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="cta-container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col col-small-10 col-medium-8 col-large-6 col-giant-6">
+                        <blockquote class="h1">
+                            <span>Navigating the</span>
+                            <span>digital landscape</span>
+                            <span>for success</span>
+                        </blockquote>
+
+                        <p>
+                            Our digital marketing agency helps businesses grow and succeed online through a range of
+                            services including SEO, PPC, social media marketing, and content creation.
+                        </p>
+
+                        <a href="/" class="btn" title="Book a consultation">Book a consultation</a>
+                    </div>
+
+
+
+                    <div class="col-small-10 col-medium-8 col-large-6">
+                        <div class="illustration-holder">
+                            <img src="/assets/header/header-illustration/background.png" alt="Header Illustration">
+
+                            <div class="main-part parallax-element" data-speed="0.05" data-direction="up">
+                                <img src="/assets/header/header-illustration/main-part.png"
+                                    alt="Header Illustration">
+                            </div>
+
+                            <div class="heart floating-element">
+                                <img src="/assets/header/header-illustration/hearth.png" alt="Header Illustration">
+                            </div>
+
+                            <div class="socials floating-element parallax-element" data-speed="0.08" data-direction="down">
+                                <img src="/assets/header/header-illustration/socials.png" alt="Header Illustration">
+                            </div>
+
+                            <div class="video floating-element parallax-element" data-speed="0.06" data-direction="up">
+                                <img src="/assets/header/header-illustration/video.png" alt="Header Illustration">
+                            </div>
+                            
+                            <div class="location floating-element parallax-element" data-speed="0.04" data-direction="down">
+                                <img src="/assets/header/header-illustration/location.png" alt="Header Illustration">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="brandings-holder d-large-flex align-items-center justify-content-between">
+                <div class="branding-item">
+                    <img src="/assets/header/amazon.png" alt="Amazon">
+                </div>
+                <div class="branding-item">
+                    <img src="/assets/header/dribble.png" alt="Dribble">
+                </div>
+                <div class="branding-item">
+                    <img src="/assets/header/hubspot.png" alt="Hubspot">
+                </div>
+                <div class="branding-item">
+                    <img src="/assets/header/notion.png" alt="Notion">
+                </div>
+                <div class="branding-item">
+                    <img src="/assets/header/netflix.png" alt="Netflix">
+                </div>
+                <div class="branding-item">
+                    <img src="/assets/header/zoom.png" alt="Zoom">
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="services-section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-small-12 col-giant-8">
+                        <div class="section-header-holder d-flex align-items-center">
+                            <h2>Services</h2>
+                            <p>At our digital marketing agency, we offer a range of services to help businesses grow and
+                                succeed
+                                online.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row services-row justify-content-center">
+                    <div class="col-12  col-small-10 col-medium-8 col-large-6">
+                        <article class="service-card service-card--light">
+
+                            <div class="text-holder">
+                                <h3><span>Search engine</span><span>optimization</span></h3>
+                                <a href="/" class="service-link" title="Learn more about SEO">
+                                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                        viewBox="0 0 1024 1024">
+                                        <path class="circle"
+                                            d="M1024 512c0 282.77-229.23 512-512 512s-512-229.23-512-512c0-282.77 229.23-512 512-512s512 229.23 512 512z">
+                                        </path>
+                                        <path class="arrow"
+                                            d="M280.978 616.92c-17.92 10.345-24.059 33.258-13.714 51.178 10.345 17.918 33.258 24.057 51.178 13.712l-37.463-64.889zM768.485 409.305c5.357-19.985-6.504-40.528-26.489-45.883l-325.682-87.267c-19.985-5.355-40.528 6.506-45.883 26.492s6.504 40.528 26.489 45.883l289.495 77.569-77.569 289.495c-5.355 19.985 6.506 40.528 26.492 45.883 19.985 5.357 40.528-6.504 45.883-26.489l87.265-325.682zM318.442 681.809l432.59-249.756-37.463-64.889-432.59 249.756 37.463 64.889z">
+                                        </path>
+                                    </svg>
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+
+                            <div class="service-illustration" aria-hidden="true">
+                                <img src="/assets/services/service1.png" alt="">
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-small-10 col-medium-8 col-large-6">
+                        <article class="service-card service-card--green">
+                            <div class="text-holder">
+                                <h3><span>Pay‑per‑click</span><span>advertising</span></h3>
+                                <a href="/" class="service-link" title="Learn more about PPC">
+                                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                        viewBox="0 0 1024 1024">
+                                        <path class="circle"
+                                            d="M1024 512c0 282.77-229.23 512-512 512s-512-229.23-512-512c0-282.77 229.23-512 512-512s512 229.23 512 512z">
+                                        </path>
+                                        <path class="arrow"
+                                            d="M280.978 616.92c-17.92 10.345-24.059 33.258-13.714 51.178 10.345 17.918 33.258 24.057 51.178 13.712l-37.463-64.889zM768.485 409.305c5.357-19.985-6.504-40.528-26.489-45.883l-325.682-87.267c-19.985-5.355-40.528 6.506-45.883 26.492s6.504 40.528 26.489 45.883l289.495 77.569-77.569 289.495c-5.355 19.985 6.506 40.528 26.492 45.883 19.985 5.357 40.528-6.504 45.883-26.489l87.265-325.682zM318.442 681.809l432.59-249.756-37.463-64.889-432.59 249.756 37.463 64.889z">
+                                        </path>
+                                    </svg>
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+
+
+
+                            <div class="service-illustration" aria-hidden="true">
+                                <img src="/assets/services/service2.png" alt="">
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-small-10 col-medium-8 col-large-6">
+                        <article class="service-card service-card--dark">
+                            <div class="text-holder">
+                                <h3><span>Social Media</span><span>Marketing</span></h3>
+                                <a href="/" class="service-link" title="Learn more about Social Media">
+                                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                        viewBox="0 0 1024 1024">
+                                        <path class="circle"
+                                            d="M1024 512c0 282.77-229.23 512-512 512s-512-229.23-512-512c0-282.77 229.23-512 512-512s512 229.23 512 512z">
+                                        </path>
+                                        <path class="arrow"
+                                            d="M280.978 616.92c-17.92 10.345-24.059 33.258-13.714 51.178 10.345 17.918 33.258 24.057 51.178 13.712l-37.463-64.889zM768.485 409.305c5.357-19.985-6.504-40.528-26.489-45.883l-325.682-87.267c-19.985-5.355-40.528 6.506-45.883 26.492s6.504 40.528 26.489 45.883l289.495 77.569-77.569 289.495c-5.355 19.985 6.506 40.528 26.492 45.883 19.985 5.357 40.528-6.504 45.883-26.489l87.265-325.682zM318.442 681.809l432.59-249.756-37.463-64.889-432.59 249.756 37.463 64.889z">
+                                        </path>
+                                    </svg>
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+
+                            <div class="service-illustration" aria-hidden="true">
+                                <img src="/assets/services/service3.png" alt="">
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-small-10 col-medium-8 col-large-6">
+                        <article class="service-card service-card--light">
+
+                            <div class="text-holder">
+                                <h3><span>Email</span><span>Marketing</span></h3>
+                                <a href="/" class="service-link" title="Learn more about Email Marketing">
+                                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                        viewBox="0 0 1024 1024">
+                                        <path class="circle"
+                                            d="M1024 512c0 282.77-229.23 512-512 512s-512-229.23-512-512c0-282.77 229.23-512 512-512s512 229.23 512 512z">
+                                        </path>
+                                        <path class="arrow"
+                                            d="M280.978 616.92c-17.92 10.345-24.059 33.258-13.714 51.178 10.345 17.918 33.258 24.057 51.178 13.712l-37.463-64.889zM768.485 409.305c5.357-19.985-6.504-40.528-26.489-45.883l-325.682-87.267c-19.985-5.355-40.528 6.506-45.883 26.492s6.504 40.528 26.489 45.883l289.495 77.569-77.569 289.495c-5.355 19.985 6.506 40.528 26.492 45.883 19.985 5.357 40.528-6.504 45.883-26.489l87.265-325.682zM318.442 681.809l432.59-249.756-37.463-64.889-432.59 249.756 37.463 64.889z">
+                                        </path>
+                                    </svg>
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+
+
+                            <div class="service-illustration" aria-hidden="true">
+                                <img src="/assets/services/service4.png" alt="">
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-small-10 col-medium-8 col-large-6">
+                        <article class="service-card service-card--green">
+                            <div class="text-holder">
+                                <h3><span>Content</span><span>Creation</span></h3>
+                                <a href="/" class="service-link" title="Learn more about Content Creation">
+                                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                        viewBox="0 0 1024 1024">
+                                        <path class="circle"
+                                            d="M1024 512c0 282.77-229.23 512-512 512s-512-229.23-512-512c0-282.77 229.23-512 512-512s512 229.23 512 512z">
+                                        </path>
+                                        <path class="arrow"
+                                            d="M280.978 616.92c-17.92 10.345-24.059 33.258-13.714 51.178 10.345 17.918 33.258 24.057 51.178 13.712l-37.463-64.889zM768.485 409.305c5.357-19.985-6.504-40.528-26.489-45.883l-325.682-87.267c-19.985-5.355-40.528 6.506-45.883 26.492s6.504 40.528 26.489 45.883l289.495 77.569-77.569 289.495c-5.355 19.985 6.506 40.528 26.492 45.883 19.985 5.357 40.528-6.504 45.883-26.489l87.265-325.682zM318.442 681.809l432.59-249.756-37.463-64.889-432.59 249.756 37.463 64.889z">
+                                        </path>
+                                    </svg>
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+
+
+                            <div class="service-illustration" aria-hidden="true">
+                                <img src="/assets/services/service5.png" alt="">
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-small-10 col-medium-8 col-large-6">
+                        <article class="service-card service-card--dark">
+                            <div class="text-holder">
+                                <h3><span>Analytics and</span><span>Tracking</span></h3>
+                                <a href="/" class="service-link" title="Learn more about Analytics">
+                                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41"
+                                        viewBox="0 0 1024 1024">
+                                        <path class="circle"
+                                            d="M1024 512c0 282.77-229.23 512-512 512s-512-229.23-512-512c0-282.77 229.23-512 512-512s512 229.23 512 512z">
+                                        </path>
+                                        <path class="arrow"
+                                            d="M280.978 616.92c-17.92 10.345-24.059 33.258-13.714 51.178 10.345 17.918 33.258 24.057 51.178 13.712l-37.463-64.889zM768.485 409.305c5.357-19.985-6.504-40.528-26.489-45.883l-325.682-87.267c-19.985-5.355-40.528 6.506-45.883 26.492s6.504 40.528 26.489 45.883l289.495 77.569-77.569 289.495c-5.355 19.985 6.506 40.528 26.492 45.883 19.985 5.357 40.528-6.504 45.883-26.489l87.265-325.682zM318.442 681.809l432.59-249.756-37.463-64.889-432.59 249.756 37.463 64.889z">
+                                        </path>
+                                    </svg>
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+
+                            <div class="service-illustration" aria-hidden="true">
+                                <img src="/assets/services/service6.png" alt="">
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="box">
+                    <div class="row">
+                        <div class="col-large-7 col-giant-5">
+                            <h3>Let’s make things happen</h3>
+                            <p>Contact us today to learn more about how our digital marketing services can help your
+                                business
+                                grow and succeed online.</p>
+
+                            <a href="/" class="btn" title="Get your free proposal">Get your free proposal</a>
+                        </div>
+
+                        <div class="col-large-5 col-giant-7 img-col">
+                            <div class="img-holder cta-parallax" data-speed="0.15">
+                                <img src="/assets/cta-illustration.png" alt="Call to action illustration">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-small-12 col-giant-8">
+                        <div class="section-header-holder d-flex align-items-center">
+                            <h2>Case Studies</h2>
+                            <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case
+                                Studies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cases-box">
+                    <div class="case">
+                        <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50%
+                            increase in website traffic and a 25% increase in sales.</p>
+
+                        <a href="/" class="link" title="Learn more about this case study">Learn more</a>
+
+                    </div>
+
+                    <div class="case">
+                        <p>For a B2B software company, we developed an SEO strategy that resulted in a first page
+                            ranking for key keywords and a 200% increase in organic traffic.</p>
+
+                        <a href="/" class="link" title="Learn more about this case study">Learn more</a>
+                    </div>
+
+                    <div class="case">
+                        <p>For a national retail chain, we created a social media marketing campaign that increased
+                            followers by 25% and generated a 20% increase in online sales.</p>
+
+                        <a href="/" class="link" title="Learn more about this case study">Learn more</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-small-12 col-giant-8">
+                        <div class="section-header-holder d-flex align-items-center">
+                            <h2>Our Working Process</h2>
+                            <p>Step-by-Step Guide to Achieving Your Business Goals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-card active">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title h3">
+                            Consultation
+                        </span>
+
+                        <div class="icon"></div>
+                    </div>
+
+                    <div class="text">
+                        During the initial consultation, we will discuss your business goals and objectives, target
+                        audience, and current marketing efforts. This will allow us to understand your needs and tailor
+                        our services to best fit your requirements.
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title h3">
+                            Research and Strategy Development
+                        </span>
+
+                        <div class="icon"></div>
+                    </div>
+
+                    <div class="text">
+                        During the initial consultation, we will discuss your business goals and objectives, target
+                        audience, and current marketing efforts. This will allow us to understand your needs and tailor
+                        our services to best fit your requirements.
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title h3">
+                            Implementation
+                        </span>
+
+                        <div class="icon"></div>
+                    </div>
+
+                    <div class="text">
+                        During the initial consultation, we will discuss your business goals and objectives, target
+                        audience, and current marketing efforts. This will allow us to understand your needs and tailor
+                        our services to best fit your requirements.
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title h3">
+                            Monitoring and Optimization
+                        </span>
+
+                        <div class="icon"></div>
+                    </div>
+
+                    <div class="text">
+                        During the initial consultation, we will discuss your business goals and objectives, target
+                        audience, and current marketing efforts. This will allow us to understand your needs and tailor
+                        our services to best fit your requirements.
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title h3">
+                            Reporting and Communication
+                        </span>
+
+                        <div class="icon"></div>
+                    </div>
+
+                    <div class="text">
+                        During the initial consultation, we will discuss your business goals and objectives, target
+                        audience, and current marketing efforts. This will allow us to understand your needs and tailor
+                        our services to best fit your requirements.
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title h3">
+                            Continual Improvement
+                        </span>
+
+                        <div class="icon"></div>
+                    </div>
+
+                    <div class="text">
+                        During the initial consultation, we will discuss your business goals and objectives, target
+                        audience, and current marketing efforts. This will allow us to understand your needs and tailor
+                        our services to best fit your requirements.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-small-12 col-giant-8">
+                        <div class="section-header-holder d-flex align-items-center">
+                            <h2>Team</h2>
+                            <p>Meet the skilled and experienced team behind our successful digital marketing strategies
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-medium-6 col-giant-4">
+                        <div class="box-team">
+                            <div class="name-holder">
+                                <div class="image">
+                                    <img src="/assets/team/john-smith.jpg" alt="John Smith">
+                                </div>
+
+                                <div class="name">
+                                    <span class="h4">John Smith</span>
+                                    <span class="position">CEO and Founder</span>
+                                </div>
+                                <a href="/" class="icon" title="LinkedIn"></a>
+                            </div>
+
+                            <div class="text">
+                                <p>10+ years of experience in digital marketing. Expertise in SEO, PPC, and content
+                                    strategy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-medium-6 col-giant-4">
+                        <div class="box-team">
+                            <div class="name-holder">
+                                <div class="image">
+                                    <img src="/assets/team/jane-doe.jpg" alt="Jane Doe">
+                                </div>
+
+                                <div class="name">
+                                    <span class="h4">Jane Doe</span>
+                                    <span class="position">Director of Operations</span>
+                                </div>
+                                <a href="/" class="icon" title="LinkedIn"></a>
+                            </div>
+
+                            <div class="text">
+                                <p>7+ years of experience in project management and team leadership. Strong
+                                    organizational and communication skills</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-medium-6 col-giant-4">
+                        <div class="box-team">
+                            <div class="name-holder">
+                                <div class="image">
+                                    <img src="/assets/team/michael-brown.jpg" alt="Michael Brown">
+                                </div>
+
+                                <div class="name">
+                                    <span class="h4">Michael Brown</span>
+                                    <span class="position">Senior SEO Specialist</span>
+                                </div>
+                                <a href="/" class="icon" title="LinkedIn"></a>
+                            </div>
+
+                            <div class="text">
+                                <p>5+ years of experience in SEO and content creation. Proficient in keyword research
+                                    and on-page optimization</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-medium-6 col-giant-4">
+                        <div class="box-team">
+                            <div class="name-holder">
+                                <div class="image">
+                                    <img src="/assets/team/emily-johnson.jpg" alt="Emily Johnson">
+                                </div>
+
+                                <div class="name">
+                                    <span class="h4">Emily Johnson</span>
+                                    <span class="position">PPC Manager</span>
+                                </div>
+                                <a href="/" class="icon" title="LinkedIn"></a>
+                            </div>
+
+                            <div class="text">
+                                <p>3+ years of experience in paid search advertising. Skilled in campaign management and
+                                    performance analysis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-medium-6 col-giant-4">
+                        <div class="box-team">
+                            <div class="name-holder">
+                                <div class="image">
+                                    <img src="/assets/team/brian-williams.jpg" alt="Brian Williams">
+                                </div>
+
+                                <div class="name">
+                                    <span class="h4">Brian Williams</span>
+                                    <span class="position">Social Media Specialist</span>
+                                </div>
+                                <a href="/" class="icon" title="LinkedIn"></a>
+                            </div>
+
+                            <div class="text">
+                                <p>4+ years of experience in social media marketing. Proficient in creating and
+                                    scheduling content, analyzing metrics, and building engagement</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-medium-6 col-giant-4">
+                        <div class="box-team">
+                            <div class="name-holder">
+                                <div class="image">
+                                    <img src="/assets/team/sarah-kim.jpg" alt="Sarah Kim">
+                                </div>
+
+                                <div class="name">
+                                    <span class="h4">Sarah Kim</span>
+                                    <span class="position">Content Creator</span>
+                                </div>
+                                <a href="/" class="icon" title="LinkedIn"></a>
+                            </div>
+
+                            <div class="text">
+                                <p>2+ years of experience in writing and editing
+                                    Skilled in creating compelling, SEO-optimized content for various industries</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-small-12 col-giant-8">
+                        <div class="section-header-holder d-flex align-items-center">
+                            <h2>Testimonials</h2>
+                            <p>Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital
+                                Marketing Services
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-holder">
+                    <div class="swiper testimonials-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+
+                                <div class="reviews-holder">
+                                    "We have been working with Positivus for the past year and have seen a significant
+                                    increase in website traffic and leads as a result of their efforts. The team is
+                                    professional, responsive, and truly cares about the success of our business. We
+                                    highly recommend Positivus to any company looking to grow their online presence."
+                                </div>
+
+                                <div class="name-holder">
+                                    <span>John Smith</span>
+                                    <span>Marketing Director at XYZ Corp</span>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews-holder">
+                                    "We have been working with Positivus for the past year and have seen a significant
+                                    increase in website traffic and leads as a result of their efforts. The team is
+                                    professional, responsive, and truly cares about the success of our business. We
+                                    highly recommend Positivus to any company looking to grow their online presence."
+                                </div>
+
+                                <div class="name-holder">
+                                    <span>John Smith</span>
+                                    <span>Marketing Director at XYZ Corp</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews-holder">
+                                    "We have been working with Positivus for the past year and have seen a significant
+                                    increase in website traffic and leads as a result of their efforts. The team is
+                                    professional, responsive, and truly cares about the success of our business. We
+                                    highly recommend Positivus to any company looking to grow their online presence."
+                                </div>
+
+                                <div class="name-holder">
+                                    <span>John Smith</span>
+                                    <span>Marketing Director at XYZ Corp</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                        <div class="d-flex arrows-holder">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-small-12 col-giant-8">
+                        <div class="section-header-holder d-flex align-items-center">
+                            <h2>Contact Us</h2>
+                            <p>Connect with Us: Let's Discuss Your Digital Marketing Needs
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-holder">
+                    <div class="row">
+                        <div class="col-medium-8 col-large-6">
+                            <form action="">
+                                <div class="form-radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="contact-type" value="say-hi" checked>
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-text">Say Hi</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="contact-type" value="get-quote">
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-text">Get a Quote</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email*</label>
+                                    <input type="email" id="email" name="email" placeholder="Email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message*</label>
+                                    <textarea id="message" name="message" placeholder="Message" rows="5"
+                                        required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-submit">Send Message</button>
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <div class="contact-illustration">
+                        <img src="/assets/contact-illustration.png" alt="Contact illustration">
+                    </div>
+                </div>
+        </section>
+
+    </main>
 
 
     <footer>
         <div class="container">
-
-            <div class="footer-container">
+            <div class=" footer-container">
                 <div class="footer-navi-holder d-flex align-items-center justify-content-between">
 
                     <a href="/" class="footer-logo">
@@ -29,27 +769,27 @@
                     <div class="navi-holder">
                         <ul class="navi-add">
                             <li>
-                                <a href="/" class="footer-link">About us</a>
+                                <a href="/" class="footer-link" title="About us">About us</a>
                             </li>
                             <li>
-                                <a href="/" class="footer-link">Services</a>
+                                <a href="/" class="footer-link" title="Services">Services</a>
                             </li>
                             <li>
-                                <a href="/" class="footer-link">Use Cases</a>
+                                <a href="/" class="footer-link" title="Use Cases">Use Cases</a>
                             </li>
                             <li>
-                                <a href="/" class="footer-link">Pricing</a>
+                                <a href="/" class="footer-link" title="Pricing">Pricing</a>
                             </li>
                             <li>
-                                <a href="/" class="footer-link">Blog</a>
+                                <a href="/" class="footer-link" title="Blog">Blog</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="footer-social-icons d-flex align-items-center gap-20">
-                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn"></a>
-                        <a href="#" class="social-icon facebook" aria-label="Facebook"></a>
-                        <a href="#" class="social-icon twitter" aria-label="Twitter"></a>
+                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn" title="Visit us on LinkedIn"></a>
+                        <a href="#" class="social-icon facebook" aria-label="Facebook" title="Visit us on Facebook"></a>
+                        <a href="#" class="social-icon twitter" aria-label="Twitter" title="Visit us on Twitter"></a>
                     </div>
                 </div>
 
@@ -57,26 +797,36 @@
 
                     <div class="contact-info">
                         <span class="headline">Contact us:</span>
-                        <span>Email: <a href="mailto:info@positivus.com">info@positivus.com</a></span>
-                        <span>Phone: <a href="tel:555-567-8901">555-567-8901</a></span>
+                        <span>Email: <a href="mailto:info@positivus.com"
+                                title="Email us at info@positivus.com">info@positivus.com</a></span>
+                        <span>Phone: <a href="tel:555-567-8901" title="Call us at 555-567-8901">555-567-8901</a></span>
                         <span>Address: 1234 Main St <span>Moonstone City, Stardust State 12345</span></span>
                     </div>
 
                     <div class="subscribe-container">
-                        
+
                         <form action="#" method="post" class="subscribe-form d-flex align-items-center gap-10">
-                            <input type="email" name="email" placeholder="Email" required>
-                            <button type="submit" class="subscribe-button btn">Subscribe to news</button>
+                            <input type="email" name="email" placeholder="Email" class="lighter" required>
+                            <button type="submit" class="subscribe-button btn primary"
+                                title="Subscribe to news">Subscribe to news</button>
                         </form>
                     </div>
 
                 </div>
+
+                <div class="privacy-container d-flex align-items-center">
+                    <p>© 2023 Positivus. All Rights Reserved.</p>
+                    <a href="/">Privacy Policy</a>
+                </div>
+
             </div>
         </div>
 
     </footer>
 
 
+    <!-- Swiper JS (CDN) -->
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

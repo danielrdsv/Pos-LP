@@ -1,4 +1,13 @@
-// Centralized breakpoints and mixin for media queries
+// Centralized responsive breakpoints and mixins
+$grid-breakpoints: (
+  default: 0,
+  tiny: 480px,
+  small: 640px,
+  medium: 760px,
+  large: 992px,
+  giant: 1200px,
+  cut: 1620px
+);
 
 $gridMap: (
   tiny: (width: (480px)),
@@ -9,9 +18,15 @@ $gridMap: (
   cut: (width: (1620px))
 );
 
+$nav-breakpoint: large; 
+
 @mixin breakpoint($point, $direction: min) {
   @if map-has-key($gridMap, $point) {
-    @media (#{$direction+'-width'}: nth(map-get(map-get($gridMap, $point), width), 1)) {
+    $width: nth(map-get(map-get($gridMap, $point), width), 1);
+    @if $direction == max {
+      $width: $width - 0.02px;
+    }
+    @media (#{$direction+'-width'}: $width) {
       @content;
     }
   }

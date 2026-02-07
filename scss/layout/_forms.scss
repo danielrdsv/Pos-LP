@@ -1,0 +1,148 @@
+// Forms
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea {
+	width: 100%;
+	min-height: rem(65px);
+	border-radius: rem(14px);
+	border: 1px solid #ccc;
+	padding: rem(18px) rem(22px);
+	background: #fff;
+	color: #222;
+	font-size: rem(18px);    
+	box-sizing: border-box;
+	gap: 10px; 
+	transition: border-color 0.2s;
+
+	&:focus {
+		outline: none;
+		border-color: $dark;
+	}
+
+    &.lighter{
+        background: transparent;
+        border: 1px solid $light;
+        color: $light;
+        
+        &::placeholder {
+            color: $light;
+        }
+    }
+}
+
+// Contact form specific styles
+form{
+    .form-radio-group{
+        display: flex;
+        gap: rem(30px);
+        margin-bottom: rem(30px);
+
+        @include breakpoint(medium){
+            gap: rem(35px);
+            margin-bottom: rem(40px);
+        }
+    }
+
+    .radio-label{
+        display: flex;
+        align-items: center;
+        gap: rem(10px);
+        cursor: pointer;
+
+        input[type="radio"]{
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+
+            &:checked + .radio-custom{
+                border-color: $dark;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: rem(14px);
+                    height: rem(14px);
+                    background: $primary;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .radio-custom{
+            width: rem(28px);
+            height: rem(28px);
+            border: 1px solid $dark;
+            border-radius: 50%;
+            position: relative;
+            flex-shrink: 0;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .radio-text{
+            font-size: rem(16px);
+            line-height: 1.4;
+
+            @include breakpoint(medium){
+                font-size: rem(18px);
+            }
+        }
+    }
+
+    .form-group{
+        margin-bottom: rem(25px);
+
+        label{
+            display: block;
+            margin-bottom: rem(8px);
+            font-size: rem(14px);
+
+            @include breakpoint(medium){
+                font-size: rem(16px);
+            }
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: rem(16px) rem(25px);
+            border: 1px solid $dark;
+            border-radius: rem(14px);
+            font-size: rem(16px);
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+
+            @include breakpoint(medium){
+                padding: rem(18px) rem(30px);
+            }
+
+            &:focus{
+                outline: none;
+                border-color: $primary;
+            }
+
+            &::placeholder{
+                color: #999;
+            }
+        }
+
+        textarea{
+            resize: vertical;
+            min-height: rem(90px);
+        }
+    }
+
+    .btn-submit{
+        width: 100%;
+        margin-top: rem(15px);
+
+        @include breakpoint(medium){
+            margin-top: rem(20px);
+        }
+    }
+}

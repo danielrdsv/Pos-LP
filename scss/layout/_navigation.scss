@@ -1,22 +1,114 @@
 // Navigation styles
+.fixed-container {
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: rem(18px) 0;
+    background: transparent;
 
+    body.scrolled & {
+        background: rgba($light, 0.95);
+        box-shadow: 0 2px 4px rgba($dark, 0.1);
+    }
+}
+
+.header-navi-holder {
+    @include breakpoint($nav-breakpoint) {
+        gap: rem(20px);
+
+        @include breakpoint(giant) {
+            gap: rem(40px);
+
+        }
+
+        .navi-main {
+            display: flex;
+            gap: rem(20px);
+
+            @include breakpoint(giant) {
+                gap: rem(40px);
+            }
+
+        }
+
+    }
+
+    .navi-main {
+        li {
+            @include breakpoint($nav-breakpoint, max) {
+                width: 100%;
+                border-bottom: 1px solid rgba($dark, 0.1);
+            }
+
+            a.nav-link {
+                color: $dark;
+                font-size: rem(20px);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                border-bottom: 1px solid transparent;
+
+                @include breakpoint($nav-breakpoint, max) {
+                    display: block;
+                    padding: rem(18px);
+                }
+
+                @include breakpoint($nav-breakpoint) {
+                    &:hover,
+                    &:focus {
+                        border-bottom: 1px solid $dark;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
 
 // Footer Navi
+.navi-holder {
+    @include breakpoint(medium, max) {
+        width: 100%;
+    }
 
-.navi-add {
-    display: flex;
-    gap: rem(40px);
+    .navi-add {
+        text-align: center;
 
-    li {
-        a {
-            color: $light;
-            font-size: rem(18px);
-            text-decoration: underline;
-            transition: all 0.3s ease;
+        @include breakpoint(medium) {
+            display: flex;
+            gap: rem(20px);
+            text-align: left;
+        }
 
-            &:hover,
-            &:focus {
-                color: $primary;
+        @include breakpoint(giant) {
+            gap: rem(40px);
+        }
+
+        li {
+            @include breakpoint(medium, max) {
+                border-bottom: 1px solid $light;
+            }
+
+            a {
+                color: $light;
+                font-size: rem(18px);
+                text-decoration: underline;
+                transition: all 0.3s ease;
+
+                @include breakpoint(medium, max) {
+                    display: block;
+                    padding: rem(18px) 0;
+                    text-decoration: none;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $primary;
+                }
             }
         }
     }
