@@ -1,11 +1,33 @@
 .btn,
 button {
     cursor: pointer;
+    font-size: rem(20px);
     border: 1px solid $dark;
     border-radius: rem(14px);
-    padding: rem(12px);
-    display: block;
+    padding: rem(20px) rem(35px);
+    display: inline-block;
     text-align: center;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background: $dark;
+    color: $light;
+
+
+    &.primary {
+        background: $primary;
+        color: $dark;
+    }
+
+    &.secondary {
+        background: transparent;
+        color: $dark;
+    }
+
+    &:hover {
+        background: darken($primary, 10%);
+        color: $dark;
+    }
 }
 
 .flex {
