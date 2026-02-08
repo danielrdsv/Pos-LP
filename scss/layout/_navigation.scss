@@ -9,8 +9,12 @@
     padding: rem(18px) 0;
     background: transparent;
 
+    @include breakpoint($nav-breakpoint, max) {
+        border-bottom: 1px solid rgba($dark, 0.1);
+    }
+
     body.scrolled & {
-        background: rgba($light, 0.95);
+        background: rgba($light, 1);
         box-shadow: 0 2px 4px rgba($dark, 0.1);
     }
 }
@@ -53,9 +57,15 @@
                 @include breakpoint($nav-breakpoint, max) {
                     display: block;
                     padding: rem(18px);
+
+                    &:hover,
+                    &:focus {
+                        background: $primary;
+                    }
                 }
 
                 @include breakpoint($nav-breakpoint) {
+
                     &:hover,
                     &:focus {
                         border-bottom: 1px solid $dark;

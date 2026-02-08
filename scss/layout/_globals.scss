@@ -16,7 +16,6 @@ $dark: #000000;
 $light: #FFFFFF;
 $shadow: 0 rem(5px) 0 0 $secondary;
 
-
 // Spacing Variables
 $grid-gutter-width: rem(40px);
 $radius: rem(45px);
@@ -28,7 +27,6 @@ $section-spacing-desktop: rem(140px);
 
 main {
     font-size: rem(18px);
-    overflow-x: hidden;
 
     p {
         margin-bottom: rem(26px);
@@ -39,6 +37,7 @@ body {
     color: #222;
     font-family: 'Space Grotesk';
     color: $dark;
+    overflow-x: hidden;
 }
 
 
@@ -132,12 +131,18 @@ h5,
         align-items: center;
         justify-content: space-between;
         gap: rem(40px);
-        margin-bottom: rem(80px);
+        margin-bottom: rem(50px);
         text-align: left;
     }
 
+    @include breakpoint(large) {
+        margin-bottom: rem(80px);
+    }
+
     h2 {
-        white-space: nowrap;
+        @include breakpoint(large) {
+            white-space: nowrap;
+        }
     }
 
     p {

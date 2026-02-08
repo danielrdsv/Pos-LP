@@ -28,12 +28,6 @@ yarn-error.log*
 *.log
 *.tmp
 
-# Ignore fonts cache
-fonts/icomoon/fonts/
-
-# Ignore compiled CSS (if generated)
-# css/*.css
-
 # Ignore assets cache
 assets/cache/
 
