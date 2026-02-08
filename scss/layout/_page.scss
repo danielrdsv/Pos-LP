@@ -5,7 +5,12 @@ header {
     margin-top: rem(60px);
 
     .cta-container {
-        padding: rem(70px) 0;
+        padding: rem(50px) 0;
+
+        @include breakpoint(medium) {
+            padding: rem(70px) 0;
+
+        }
 
         @include breakpoint(large, max) {
             text-align: center;
@@ -84,6 +89,7 @@ header {
                 top: 25%;
                 right: 5%;
             }
+
             .location {
                 position: absolute;
                 top: 50%;
@@ -476,18 +482,18 @@ header {
         border-radius: $radius;
         border: 1px solid $secondary;
         box-shadow: 0 rem(5px) 0 0 $secondary;
-        padding: rem(51px) rem(36px);
         cursor: pointer;
         transition: background-color 0.3s ease;
         margin-bottom: rem(30px);
+        padding: rem(20px) rem(26px);
 
-        @include breakpoint(small, max) {
-            padding: rem(36px) rem(26px);
+
+        @include breakpoint(medium) {
+            padding: rem(30px) rem(26px);
         }
 
         @include breakpoint(large) {
             padding: rem(51px) rem(60px);
-
         }
 
         &.active {
@@ -564,6 +570,7 @@ header {
                 border-radius: 100%;
                 width: rem(57px);
                 height: rem(57px);
+                flex-shrink: 0;
 
                 @include breakpoint(small, max) {
                     width: rem(37px);
@@ -972,11 +979,11 @@ footer {
         .footer-navi-holder {
             margin-bottom: rem(65px);
             flex-wrap: wrap;
+            gap: rem(30px);
 
-            @include breakpoint(medium, max) {
-                flex-direction: column;
-                gap: rem(30px);
-                margin-bottom: rem(40px);
+            @include breakpoint(large) {
+                flex-direction: row;
+                margin-bottom: rem(65px);
             }
 
             .footer-logo {
@@ -991,14 +998,18 @@ footer {
             .footer-social-icons {
                 gap: rem(10px);
 
+
+                @include breakpoint(medium, max) {
+                    justify-content: center;
+                    width: 100%;
+                }
+
                 @include breakpoint(medium) {
                     gap: rem(15px);
-
                 }
 
                 @include breakpoint(large) {
                     gap: rem(20px);
-
                 }
 
                 .social-icon {
@@ -1010,8 +1021,6 @@ footer {
                     &.facebook {
                         font-size: rem(32px);
                     }
-
-
 
                     &.linkedin::before {
                         @include icon('linkedin');

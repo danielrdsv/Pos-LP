@@ -7,7 +7,6 @@
 
 main {
   font-size: 1.125rem;
-  overflow-x: hidden;
 }
 main p {
   margin-bottom: 1.625rem;
@@ -17,6 +16,7 @@ body {
   color: #222;
   font-family: "Space Grotesk";
   color: #000000;
+  overflow-x: hidden;
 }
 
 ul {
@@ -106,12 +106,19 @@ h5,
     align-items: center;
     justify-content: space-between;
     gap: 2.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3.125rem;
     text-align: left;
   }
 }
-.section-header-holder h2 {
-  white-space: nowrap;
+@media (min-width: 992px) {
+  .section-header-holder {
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .section-header-holder h2 {
+    white-space: nowrap;
+  }
 }
 .section-header-holder p {
   margin: 0;
@@ -161,7 +168,7 @@ h5,
     max-width: 25rem;
     height: 100vh;
     background: #FFFFFF;
-    padding: 3.75rem 1.125rem 6.25rem 1.125rem;
+    padding: 4.8125rem 1.125rem 6.25rem 1.125rem;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1000;
@@ -219,7 +226,12 @@ header {
   margin-top: 3.75rem;
 }
 header .cta-container {
-  padding: 4.375rem 0;
+  padding: 3.125rem 0;
+}
+@media (min-width: 760px) {
+  header .cta-container {
+    padding: 4.375rem 0;
+  }
 }
 @media (max-width: 991.98px) {
   header .cta-container {
@@ -630,14 +642,14 @@ header .brandings-holder .branding-item img {
   border-radius: 2.8125rem;
   border: 1px solid #191A23;
   box-shadow: 0 0.3125rem 0 0 #191A23;
-  padding: 3.1875rem 2.25rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-bottom: 1.875rem;
+  padding: 1.25rem 1.625rem;
 }
-@media (max-width: 639.98px) {
+@media (min-width: 760px) {
   .process-section .process-card {
-    padding: 2.25rem 1.625rem;
+    padding: 1.875rem 1.625rem;
   }
 }
 @media (min-width: 992px) {
@@ -716,6 +728,7 @@ header .brandings-holder .branding-item img {
   border-radius: 100%;
   width: 3.5625rem;
   height: 3.5625rem;
+  flex-shrink: 0;
 }
 @media (max-width: 639.98px) {
   .process-section .process-card .d-flex .icon {
@@ -1113,12 +1126,12 @@ footer .footer-container {
 footer .footer-container .footer-navi-holder {
   margin-bottom: 4.0625rem;
   flex-wrap: wrap;
+  gap: 1.875rem;
 }
-@media (max-width: 759.98px) {
+@media (min-width: 992px) {
   footer .footer-container .footer-navi-holder {
-    flex-direction: column;
-    gap: 1.875rem;
-    margin-bottom: 2.5rem;
+    flex-direction: row;
+    margin-bottom: 4.0625rem;
   }
 }
 @media (max-width: 991.98px) {
@@ -1131,6 +1144,12 @@ footer .footer-container .footer-navi-holder {
 }
 footer .footer-container .footer-navi-holder .footer-social-icons {
   gap: 0.625rem;
+}
+@media (max-width: 759.98px) {
+  footer .footer-container .footer-navi-holder .footer-social-icons {
+    justify-content: center;
+    width: 100%;
+  }
 }
 @media (min-width: 760px) {
   footer .footer-container .footer-navi-holder .footer-social-icons {
@@ -1292,8 +1311,13 @@ footer .footer-container .privacy-container a:hover {
   padding: 1.125rem 0;
   background: transparent;
 }
+@media (max-width: 991.98px) {
+  .fixed-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
 body.scrolled .fixed-container {
-  background: rgba(255, 255, 255, 0.95);
+  background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -1335,6 +1359,9 @@ body.scrolled .fixed-container {
   .header-navi-holder .navi-main li a.nav-link {
     display: block;
     padding: 1.125rem;
+  }
+  .header-navi-holder .navi-main li a.nav-link:hover, .header-navi-holder .navi-main li a.nav-link:focus {
+    background: #B9FF66;
   }
 }
 @media (min-width: 992px) {
